@@ -1,0 +1,216 @@
+:root {
+    --purple: #73204f;
+    --pink: rgb(255, 227, 227);
+    --light-pink: rgb(255, 240, 245);
+    --peach: #f2a899;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  ::placeholder {
+    color: var(--peach);
+  }
+  a {
+    text-decoration: none;
+  }
+  ul,
+  li {
+    list-style: none;
+  }
+  
+  body {
+    background-color: var(--light-pink);
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+  }
+  h1 {
+    font-size: 3rem;
+    color: var(--purple);
+    font-weight: bold;
+  }
+  .do {
+    margin-bottom: 2rem;
+    display: inline-block;
+    font-size: 1.3rem;
+    font-family: "Dancing Script", cursive;
+  }
+  .container {
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 3rem;
+  }
+  .input {
+    width: 65%;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    background-color: #fff;
+    border: 1px solid var(--peach);
+    border-radius: 8px;
+    text-align: left;
+    display: flex;
+    overflow: hidden;
+    padding-left: 1rem;
+  }
+  input[type="text"] {
+    width: 80%;
+    height: 3rem;
+    outline: none;
+    border: none;
+    margin-right: 1rem;
+    color: var(--peach);
+    font-size: 1.3rem;
+    float: right;
+  }
+  .addBtn {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    color: var(--peach);
+  }
+  .list {
+    width: 65%;
+    margin: 0 auto;
+    max-height: 50vh;
+    overflow-y: scroll;
+  }
+  .list::-webkit-scrollbar {
+    width: 20px;
+  }
+  
+  .list::-webkit-scrollbar-track {
+    background: var(--light-pink);
+    border-radius: 30px;
+  }
+  
+  .list::-webkit-scrollbar-thumb {
+    background: var(--peach);
+    border: solid 7px var(--light-pink);
+    border-radius: 30px;
+  }
+  li {
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    justify-content: space-between;
+    position: relative;
+  
+    width: 100%;
+  }
+  
+  input[type="checkbox"] {
+    display: none;
+  }
+  
+  input[type="checkbox"] + *::before {
+    content: "";
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 1px solid var(--peach);
+    width: 23px;
+    height: 23px;
+    border-radius: 5px;
+    margin-right: 1rem;
+  }
+  input[type="checkbox"]:checked + *::before {
+    content: "✓";
+    color: white;
+    text-align: center;
+    background: var(--purple);
+    border-color: var(--purple);
+   
+  }
+  label {
+    width: 100%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    height: 3rem;
+  }
+  .text {
+    width: 90%;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .checkboxText {
+    width: 90%;
+    border-bottom: 2px solid var(--peach);
+  }
+  
+  .fa-trash-can {
+    position: absolute;
+    top: 0.8rem;
+    right: 1rem;
+    cursor: pointer;
+    color: var(--purple);
+  }
+  
+  .opacity {
+    opacity: 0.5;
+    
+  }
+  .decoration {
+    text-decoration: line-through;
+  }
+  
+  .clear {
+    color: var(--purple);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.1em 0.6em;
+    font-weight: bold;
+    border: none;
+  
+    margin-top: 1rem;
+    --c: var(--peach);
+  
+    box-shadow: 0 0 0 0.1em inset var(--c);
+    --_g: linear-gradient(var(--c) 0 0) no-repeat;
+    background: var(--_g) calc(var(--_p, 0%) - 100%) 0%,
+      var(--_g) calc(200% - var(--_p, 0%)) 0%,
+      var(--_g) calc(var(--_p, 0%) - 100%) 100%,
+      var(--_g) calc(200% - var(--_p, 0%)) 100%;
+    background-size: 50.5% calc(var(--_p, 0%) / 2 + 0.5%);
+    outline-offset: 0.1em;
+    transition: background-size 0.4s, background-position 0s 0.4s;
+  }
+  button:hover {
+    --_p: 100%;
+    transition: background-position 0.4s, background-size 0s;
+  }
+  button:active {
+    box-shadow: 0 0 9e9Q inset #0009;
+    background-color: var(--c);
+    color: #fff;
+  }
+  
+  @media screen and (max-width: 932px) {
+    .container {
+      width: 95%;
+    }
+    .input,
+    .list {
+      width: 80%;
+    }
+    .input {
+      padding-left: 0.5rem;
+    }
+    input[type="text"] {
+      font-size: 1.1rem;
+      margin-right: 0;
+    }
+    .addBtn {
+      font-size: 1.3rem;
+    }
+  }
+  
